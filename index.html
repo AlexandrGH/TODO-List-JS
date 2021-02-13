@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>TODO List on JS</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	</head>
+	<body>
+		<main class="container">
+			<div class="theme">
+				<div class="theme__content">
+					<div class="theme__shape" onclick="themeChange()">
+						<div class="theme__btn" id="theme__btn"></div>
+					</div>
+				</div>
+			</div>
+			<div class="head">
+				<div class="head__input">
+					<input type="text" name="" id="ipt" maxlength="85" placeholder="Добавьте новую задачу...">
+					<button onclick="addTask()">Add</button>
+				</div>
+			</div>
+			<div class="buttons">
+				<div class="">
+					select: 
+					<button onclick="selectAll()">all</button>
+					<button onclick="deSelectAll()">none</button>
+				</div>
+				<div class="buttons__actions" id="buttons__actions">					 
+					<button onclick="done()">done</button>
+					<button onclick="removeN()">delete</button>
+				</div>
+			</div>
+			<ul class="list" id="list">
+			</ul>
+		</main>
+		<script src="js/script.js"></script>
+	</body>
+</html>

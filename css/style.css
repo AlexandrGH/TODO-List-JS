@@ -1,0 +1,325 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+  background: lightblue;
+  padding-top: 2%;
+  font-family: "Roboto";
+  font-size: 24px;
+}
+
+button {
+  font-size: 20px;
+  letter-spacing: -0.05em;
+  min-width: 3em;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.head {
+  padding: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  background: blueviolet;
+}
+
+.head__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.head__input input {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90%;
+          flex: 0 0 90%;
+  font-size: 24px;
+  padding: 0 10px;
+}
+
+.head__input button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 10%;
+          flex: 0 0 10%;
+  font-weight: bold;
+}
+
+.buttons {
+  padding: 5px 20px;
+  font-size: 18px;
+  background: blueviolet;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.buttons button {
+  border-radius: 1em;
+  line-height: 18px;
+  font-size: 18px;
+  padding: 2px 5px;
+}
+
+.buttons__actions {
+  display: none;
+}
+
+.list {
+  padding: 5px 15px;
+  font-size: 18px;
+  padding-bottom: 15px;
+  background: blueviolet;
+}
+
+.list li {
+  background: white;
+  padding: 8px 5px 2px 30px;
+  border-bottom: 2px solid black;
+  position: relative;
+}
+
+.list li.done {
+  text-decoration: line-through;
+}
+
+.list li.done::before {
+  content: "";
+  background: url("../img/check.svg");
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.list__check {
+  position: absolute;
+  top: 8px;
+  right: 30px;
+  width: 27px;
+}
+
+.list__check::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
+.list__check:checked::before {
+  background: #777;
+}
+
+.list__delete {
+  background: url("../img/close.svg") no-repeat center;
+  background-size: 90%;
+  height: 27px;
+  width: 27px;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  border-radius: 50%;
+}
+
+.list__delete:hover {
+  background-color: darkred;
+}
+
+.theme {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.theme__content {
+  background: blueviolet;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  padding: 7px 10px 10px 10px;
+  border-radius: 10px;
+  position: relative;
+  top: 8px;
+}
+
+.theme__shape {
+  height: 30px;
+  width: 50px;
+  background: gray;
+  border: 4px solid black;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.theme__btn {
+  height: 22px;
+  width: 22px;
+  background: url("../img/theme.svg") center no-repeat;
+  background-size: 75%;
+  background-color: gold;
+  border-radius: 50%;
+  position: absolute;
+}
+
+body.dark {
+  background: #222;
+  color: black;
+}
+
+body.dark .head {
+  background: black;
+}
+
+body.dark .head__input input {
+  background-color: goldenrod;
+  color: black;
+}
+
+body.dark .head__input input::-webkit-input-placeholder {
+  color: black;
+}
+
+body.dark .head__input input:-ms-input-placeholder {
+  color: black;
+}
+
+body.dark .head__input input::-ms-input-placeholder {
+  color: black;
+}
+
+body.dark .head__input input::placeholder {
+  color: black;
+}
+
+body.dark .head button {
+  background-color: black;
+  border: 2px solid goldenrod;
+  color: goldenrod;
+}
+
+body.dark .buttons {
+  color: goldenrod;
+  background: black;
+}
+
+body.dark .buttons button {
+  background-color: goldenrod;
+}
+
+body.dark .list {
+  background: black;
+}
+
+body.dark .list li {
+  background-color: goldenrod;
+}
+
+body.dark .list__check::before {
+  background-color: goldenrod;
+}
+
+body.dark .list__check:checked::before {
+  background-color: #333;
+}
+
+body.dark .theme__content {
+  background: black;
+}
+
+body.dark .theme__shape {
+  background: #222;
+}
+
+body.dark .theme__btn {
+  right: 0;
+  background-color: goldenrod;
+}
